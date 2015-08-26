@@ -1,0 +1,2 @@
+C:\Users\Benedikt\Documents\Visual Studio 2015\Projects\ApiProbe\WriteOnly.ApiProbe\bin\Release\DataBinding.exe.config
+C:\Users\Benedikt\Documents\Visual Studio 2015\Projects\ApiProbe\WriteOnly.ApiProbe\bin\Release\ApiProbe.exe.config

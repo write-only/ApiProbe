@@ -1,0 +1,65 @@
+﻿<Window x:Class="WriteOnly.ApiProbe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WriteOnly.ApiProbe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" x:ClassModifier="internal">
+    <Grid>
+        <TreeView Name="TreeView">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="{x:Type local:MailItem}" ItemsSource="{Binding Items}">
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Image Source="/Icons/mail16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
+                        <StackPanel>
+                            <TextBlock Text="{Binding Subject, StringFormat=\'{0}\'}" FontWeight="Bold" />
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} {1}">
+                                        <Binding Path="Direction" />
+                                        <Binding Path="Peer.Name" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:DonationItem}" ItemsSource="{Binding Items}">
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Image Source="/Icons/donation16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
+                        <StackPanel>
+                            <TextBlock Text="{Binding Amount, StringFormat={}{0:#,#.00} ISK}" FontWeight="Bold" />
+                            <TextBlock>
+                                <Run Text="{Binding Direction}" />
+                                <Run Text="{Binding Peer.Name}" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:ContractItem}" ItemsSource="{Binding Items}">
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Image Source="/Icons/contract16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
+                        <StackPanel>
+                            <TextBlock Text="{Binding Amount, StringFormat={}{0:#,#.00} ISK}" FontWeight="Bold" />
+                            <TextBlock>
+                                <Run Text="{Binding Direction}" />
+                                <Run Text="{Binding Peer.Name}" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:CharacterItem}" ItemsSource="{Binding Items}">
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Image Source="/Icons/character24.png" Margin="0,0,5,0" MaxWidth="24" MaxHeight="24" />
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+            </TreeView.Resources>
+        </TreeView>
+    </Grid>
+</Window>
