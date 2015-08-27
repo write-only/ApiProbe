@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using eZet.EveLib.EveXmlModule;
 
 namespace WriteOnly.ApiProbe.Data
 {
@@ -8,7 +9,7 @@ namespace WriteOnly.ApiProbe.Data
         /// <summary>
         /// Contains all characters.
         /// </summary>
-        public List<CharacterData> Characters { get; set; }
+        public List<Character> Characters { get; set; }
         
         /// <summary>
         /// Contains Interactions of all characters.
@@ -18,7 +19,7 @@ namespace WriteOnly.ApiProbe.Data
         
         public InteractionDataManager()
         {
-            Characters = new List<CharacterData>();
+            Characters = new List<Character>();
             Interactions = new List<InteractionData>();
         }
 
@@ -27,7 +28,7 @@ namespace WriteOnly.ApiProbe.Data
         /// </summary>
         /// <param name="character">The character.</param>
         /// <returns>A List of <see cref="InteractionData"/> objects containing the character.</returns>
-        public List<InteractionData> GetInteractions(CharacterData character)
+        public List<InteractionData> GetInteractions(Character character)
         {
             List<InteractionData> interactions = new List<InteractionData>();
             
@@ -42,7 +43,7 @@ namespace WriteOnly.ApiProbe.Data
         /// <param name="firstCharacter">The first character.</param>
         /// <param name="secondCharacter">The second character.</param>
         /// <returns>A List of <see cref="InteractionData"/> objects containing both characters.</returns>
-        public List<InteractionData> GetInteractions(CharacterData firstCharacter, CharacterData secondCharacter)
+        public List<InteractionData> GetInteractions(Character firstCharacter, Character secondCharacter)
         {
             List<InteractionData> interactions = new List<InteractionData>();
 
@@ -57,7 +58,7 @@ namespace WriteOnly.ApiProbe.Data
         /// <param name="firstCharacter">The first character.</param>
         /// <param name="secondCharacter">The second character.</param>
         /// <returns>Sum of all interaction strenghts of the Interactions between the characters.</returns>
-        public double GetInteractionStrenght(CharacterData firstCharacter, CharacterData secondCharacter)
+        public double GetInteractionStrenght(Character firstCharacter, Character secondCharacter)
         {
             // Sum up all interaction strength values
             return GetInteractions(firstCharacter, secondCharacter).Sum(x => x.InteractionStrength);

@@ -126,11 +126,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ApiHandling\IMapper.cs" />
+    <Compile Include="ApiHandling\WalletMapper.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\CharacterData.cs" />
     <Compile Include="Data\ContractInteraction.cs" />
     <Compile Include="Data\DonationInteraction.cs" />
     <Compile Include="Data\InteractionDataManager.cs" />
@@ -220,9 +221,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ApiHandling\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
