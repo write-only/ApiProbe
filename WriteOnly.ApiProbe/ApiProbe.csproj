@@ -133,6 +133,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\ContractInteraction.cs" />
+    <Compile Include="Data\CorpDonationInteraction.cs" />
     <Compile Include="Data\DonationInteraction.cs" />
     <Compile Include="Data\InteractionDataManager.cs" />
     <Compile Include="Data\MailInteraction.cs" />

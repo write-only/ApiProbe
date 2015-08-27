@@ -14,9 +14,6 @@ namespace WriteOnly.ApiProbe.ApiHandling
         public WalletMapper()
         {
             Interactions = new List<InteractionData>();
-            Interactions.Add(new DonationInteraction());
-            Interactions.Add(new ContractInteraction());
-            Interactions.Add(new MailInteraction());
         }
 
         public void DoWork()
