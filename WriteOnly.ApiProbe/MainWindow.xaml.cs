@@ -10,8 +10,8 @@ namespace WriteOnly.ApiProbe
         public MainWindow()
         {
             InitializeComponent();
-            CharacterItem bear = new CharacterItem("Care Bear");
-            CharacterItem spy = new CharacterItem("Spy McAwox");
+            CharacterItem bear = new CharacterItem("Care Bear", "1");
+            CharacterItem spy = new CharacterItem("Spy McAwox", "2");
             CharacterItem gorth = new CharacterItem() { Name = "Gorth Tolkien"};
             gorth.Items.Add(new DonationItem() {Amount = (decimal) 133400.23, HasInitiated = true, Peer = bear});
             gorth.Items.Add(new ContractItem() {Amount = 1, HasInitiated = false, Peer = bear});
