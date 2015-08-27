@@ -7,7 +7,7 @@ using eZet.EveLib.EveXmlModule;
 
 namespace WriteOnly.ApiProbe.Data
 {
-    public abstract class InteractionData
+    public abstract class Interaction
     {
         public DateTime Time { get; set; }
 

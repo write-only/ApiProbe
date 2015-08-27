@@ -10,7 +10,7 @@ namespace WriteOnly.ApiProbe.ApiHandling
 {
     public interface IMapper
     {
-        List<InteractionData> Interactions { get; set; }
+        List<Interaction> Interactions { get; set; }
 
         void DoWork();
     }

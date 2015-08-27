@@ -4,7 +4,7 @@ using eZet.EveLib.EveXmlModule;
 
 namespace WriteOnly.ApiProbe.Data
 {
-    public class InteractionDataManager
+    public class InteractionManager
     {
         /// <summary>
         /// Contains all characters.
@@ -14,23 +14,23 @@ namespace WriteOnly.ApiProbe.Data
         /// <summary>
         /// Contains Interactions of all characters.
         /// </summary>
-        public List<InteractionData> Interactions { get; set; }
+        public List<Interaction> Interactions { get; set; }
         
         
-        public InteractionDataManager()
+        public InteractionManager()
         {
             Characters = new List<Character>();
-            Interactions = new List<InteractionData>();
+            Interactions = new List<Interaction>();
         }
 
         /// <summary>
-        /// Returns all <see cref="InteractionData"/>s the given character is involved in.
+        /// Returns all <see cref="Interaction"/>s the given character is involved in.
         /// </summary>
         /// <param name="character">The character.</param>
-        /// <returns>A List of <see cref="InteractionData"/> objects containing the character.</returns>
-        public List<InteractionData> GetInteractions(Character character)
+        /// <returns>A List of <see cref="Interaction"/> objects containing the character.</returns>
+        public List<Interaction> GetInteractions(Character character)
         {
-            List<InteractionData> interactions = new List<InteractionData>();
+            List<Interaction> interactions = new List<Interaction>();
             
             interactions.AddRange(Interactions.Where(i => i.Involves(character)));
 
@@ -38,14 +38,14 @@ namespace WriteOnly.ApiProbe.Data
         }
 
         /// <summary>
-        /// Returns all <see cref="InteractionData"/>s between two characters.
+        /// Returns all <see cref="Interaction"/>s between two characters.
         /// </summary>
         /// <param name="firstCharacter">The first character.</param>
         /// <param name="secondCharacter">The second character.</param>
-        /// <returns>A List of <see cref="InteractionData"/> objects containing both characters.</returns>
-        public List<InteractionData> GetInteractions(Character firstCharacter, Character secondCharacter)
+        /// <returns>A List of <see cref="Interaction"/> objects containing both characters.</returns>
+        public List<Interaction> GetInteractions(Character firstCharacter, Character secondCharacter)
         {
-            List<InteractionData> interactions = new List<InteractionData>();
+            List<Interaction> interactions = new List<Interaction>();
 
             interactions.AddRange(Interactions.Where(i => i.IsBetween(firstCharacter, secondCharacter)));
 

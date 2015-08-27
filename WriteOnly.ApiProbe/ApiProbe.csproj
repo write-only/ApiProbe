@@ -135,10 +135,10 @@
     <Compile Include="Data\ContractInteraction.cs" />
     <Compile Include="Data\CorpDonationInteraction.cs" />
     <Compile Include="Data\DonationInteraction.cs" />
-    <Compile Include="Data\InteractionDataManager.cs" />
+    <Compile Include="Data\InteractionManager.cs" />
     <Compile Include="Data\MailInteraction.cs" />
     <Compile Include="UI\ContractItem.cs" />
-    <Compile Include="Data\InteractionData.cs" />
+    <Compile Include="Data\Interaction.cs" />
     <Compile Include="UI\InteractionItem.cs" />
     <Compile Include="UI\MailItem.cs" />
     <Compile Include="MainWindow.xaml.cs">

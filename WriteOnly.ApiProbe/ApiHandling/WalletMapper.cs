@@ -9,11 +9,11 @@ namespace WriteOnly.ApiProbe.ApiHandling
 {
     public class WalletMapper : IMapper
     {
-        public List<InteractionData> Interactions { get; set; }
+        public List<Interaction> Interactions { get; set; }
 
         public WalletMapper()
         {
-            Interactions = new List<InteractionData>();
+            Interactions = new List<Interaction>();
         }
 
         public void DoWork()

@@ -1,6 +1,6 @@
 ﻿namespace WriteOnly.ApiProbe.Data
 {
-    public class MailInteraction : InteractionData
+    public class MailInteraction : Interaction
     {
         public string Subject { get; set; }
 

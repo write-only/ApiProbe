@@ -1,6 +1,6 @@
 ﻿namespace WriteOnly.ApiProbe.Data
 {
-    public class DonationInteraction : InteractionData
+    public class DonationInteraction : Interaction
     {
         public decimal Amount { get; set; }
 
