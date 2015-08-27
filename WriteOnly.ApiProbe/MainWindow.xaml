@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WriteOnly.ApiProbe"
+        xmlns:ui="clr-namespace:WriteOnly.ApiProbe.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" x:ClassModifier="internal">
     <Grid>
         <TreeView Name="TreeView">
             <TreeView.Resources>
-                <HierarchicalDataTemplate DataType="{x:Type local:MailItem}" ItemsSource="{Binding Items}">
+                <HierarchicalDataTemplate DataType="{x:Type ui:MailItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
                         <Image Source="/res/icons/mail16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
                         <StackPanel>
@@ -26,7 +27,7 @@
                     </StackPanel>
                 </HierarchicalDataTemplate>
 
-                <HierarchicalDataTemplate DataType="{x:Type local:DonationItem}" ItemsSource="{Binding Items}">
+                <HierarchicalDataTemplate DataType="{x:Type ui:DonationItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
                         <Image Source="/res/icons/donation16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
                         <StackPanel>
@@ -39,7 +40,7 @@
                     </StackPanel>
                 </HierarchicalDataTemplate>
 
-                <HierarchicalDataTemplate DataType="{x:Type local:ContractItem}" ItemsSource="{Binding Items}">
+                <HierarchicalDataTemplate DataType="{x:Type ui:ContractItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
                         <Image Source="/res/icons/contract16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
                         <StackPanel>
@@ -52,7 +53,7 @@
                     </StackPanel>
                 </HierarchicalDataTemplate>
 
-                <HierarchicalDataTemplate DataType="{x:Type local:CharacterItem}" ItemsSource="{Binding Items}">
+                <HierarchicalDataTemplate DataType="{x:Type ui:CharacterItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
                         <Image Source="/res/icons/character24.png" Margin="0,0,5,0" MaxWidth="24" MaxHeight="24" />
                         <TextBlock Text="{Binding Name}" FontWeight="Bold" />

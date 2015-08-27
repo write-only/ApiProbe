@@ -1,4 +1,4 @@
-namespace WriteOnly.ApiProbe
+namespace WriteOnly.ApiProbe.UI
 {
     public class MailItem : InteractionItem
     {

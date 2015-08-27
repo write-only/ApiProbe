@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace WriteOnly.ApiProbe
+namespace WriteOnly.ApiProbe.UI
 {
     public class CharacterItem
     {

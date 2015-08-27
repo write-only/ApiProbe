@@ -1,4 +1,6 @@
-﻿namespace WriteOnly.ApiProbe
+﻿using WriteOnly.ApiProbe.UI;
+
+namespace WriteOnly.ApiProbe
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

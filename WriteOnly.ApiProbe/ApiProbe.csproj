@@ -130,17 +130,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ContractItem.cs" />
-    <Compile Include="InteractionItem.cs" />
-    <Compile Include="MailItem.cs" />
+    <Compile Include="UI\ContractItem.cs" />
+    <Compile Include="Data\Interaction.cs" />
+    <Compile Include="UI\InteractionItem.cs" />
+    <Compile Include="UI\MailItem.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterItem.cs" />
-    <Compile Include="DonationItem.cs" />
+    <Compile Include="UI\CharacterItem.cs" />
+    <Compile Include="UI\DonationItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -213,6 +214,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApiHandling\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
