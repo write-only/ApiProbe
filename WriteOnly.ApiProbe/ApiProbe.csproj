@@ -54,6 +54,54 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EveLib, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.3.0.0.0\lib\net45\EveLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.Core, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.Core.3.0.2.0\lib\net45\EveLib.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.Element43, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.Element43.3.0.0\lib\net45\EveLib.Element43.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.EveAuth, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.EveAuth.3.0.0\lib\net45\EveLib.EveAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.EveCentral, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.EveCentral.3.0.0\lib\net45\EveLib.EveCentral.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.EveCrest, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.EveCrest.3.0.0.0\lib\net45\EveLib.EveCrest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.EveMarketData, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.EveMarketData.3.0.0\lib\net45\EveLib.EveMarketData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.EveWho, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.EveWho.3.0.0\lib\net45\EveLib.EveWho.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.EveXml, Version=3.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.EveXml.3.0.1.4\lib\net45\EveLib.EveXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.StaticData, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.StaticData.3.0.0\lib\net45\EveLib.StaticData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EveLib.ZKillboard, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\eZet.EveLib.ZKillboard.3.0.2.0\lib\net45\EveLib.ZKillboard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -110,6 +158,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
