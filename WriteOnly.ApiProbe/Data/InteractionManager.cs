@@ -8,18 +8,18 @@ namespace WriteOnly.ApiProbe.Data
         /// <summary>
         /// Contains all characters.
         /// </summary>
-        public List<CharacterData> Characters { get; set; }
+        public HashSet<CharacterData> Characters { get; set; }
         
         /// <summary>
         /// Contains Interactions of all characters.
         /// </summary>
-        public List<Interaction> Interactions { get; set; }
+        public HashSet<Interaction> Interactions { get; set; }
         
         
         public InteractionManager()
         {
-            Characters = new List<CharacterData>();
-            Interactions = new List<Interaction>();
+            Characters = new HashSet<CharacterData>();
+            Interactions = new HashSet<Interaction>();
         }
 
         /// <summary>

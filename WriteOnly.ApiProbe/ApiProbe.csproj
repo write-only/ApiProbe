@@ -126,19 +126,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ApiHandling\IMapper.cs" />
-    <Compile Include="ApiHandling\WalletMapper.cs" />
+    <Compile Include="ApiHandling\IAnalyzer.cs" />
+    <Compile Include="ApiHandling\WalletAnalyzer.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Data\AllianceData.cs" />
     <Compile Include="Data\CharacterData.cs" />
     <Compile Include="Data\ContractInteraction.cs" />
     <Compile Include="Data\CorpDonationInteraction.cs" />
     <Compile Include="Data\CorporationData.cs" />
     <Compile Include="Data\DonationInteraction.cs" />
+    <Compile Include="Data\IdValuePair.cs" />
     <Compile Include="Data\InteractionManager.cs" />
     <Compile Include="Data\MailInteraction.cs" />
+    <Compile Include="Data\StationData.cs" />
+    <Compile Include="Data\TradeInteraction.cs" />
+    <Compile Include="Data\WalletInteraction.cs" />
     <Compile Include="UI\ContractItem.cs" />
     <Compile Include="Data\Interaction.cs" />
     <Compile Include="UI\InteractionItem.cs" />

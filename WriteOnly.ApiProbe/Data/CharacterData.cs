@@ -1,33 +1,21 @@
-﻿namespace WriteOnly.ApiProbe.Data
+﻿using eZet.EveLib.EveXmlModule;
+
+namespace WriteOnly.ApiProbe.Data
 {
-    public class CharacterData
+    public class CharacterData : IdValuePair
     {
+        public CorporationData corporation { get; set; }
 
-        public string Name { get; set; }
-
-        public long ID { get; set; }
-
-        public override string ToString()
+        public CharacterData(Character character)
         {
-            return Name;
+            Name = character.CharacterName;
+            ID = character.CharacterId;
+            corporation = new CorporationData {Name = character.CorporationName, ID = character.CorporationId};
+            corporation.alliance = new AllianceData {Name = character.AllianceName, ID = character.AllianceId};
         }
 
-        protected bool Equals(CharacterData other)
+        public CharacterData()
         {
-            return ID == ID;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != GetType()) return false;
-            return Equals((CharacterData)obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return (ID.GetHashCode());
         }
     }
 }

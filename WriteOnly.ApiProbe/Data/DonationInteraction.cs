@@ -1,9 +1,7 @@
 ﻿namespace WriteOnly.ApiProbe.Data
 {
-    public class DonationInteraction : Interaction
+    public class DonationInteraction : WalletInteraction
     {
-        public decimal Amount { get; set; }
-
         public string Reason { get; set; }
     }
 }
