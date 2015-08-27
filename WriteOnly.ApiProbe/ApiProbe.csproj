@@ -130,6 +130,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Data\Character.cs" />
+    <Compile Include="Data\InteractionDataManager.cs" />
     <Compile Include="UI\ContractItem.cs" />
     <Compile Include="Data\Interaction.cs" />
     <Compile Include="UI\InteractionItem.cs" />
