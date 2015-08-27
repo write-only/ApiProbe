@@ -120,38 +120,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\character16.png" />
-    <Resource Include="Icons\character24.png" />
-    <Resource Include="Icons\contract16.png" />
-    <Resource Include="Icons\contract24.png" />
-    <Resource Include="Icons\corp16.png" />
-    <Resource Include="Icons\corp24.png" />
-    <Resource Include="Icons\donation16.png" />
-    <Resource Include="Icons\donation24.png" />
-    <Resource Include="Icons\interaction16.png" />
-    <Resource Include="Icons\interaction24.png" />
-    <Resource Include="Icons\kill16.png" />
-    <Resource Include="Icons\kill24.png" />
-    <Resource Include="Icons\largegroup16.png" />
-    <Resource Include="Icons\largegroup24.png" />
-    <Resource Include="Icons\mail16.png" />
-    <Resource Include="Icons\mail24.png" />
-    <Resource Include="Icons\settings16.png" />
-    <Resource Include="Icons\settings24.png" />
-    <Resource Include="Icons\smallgroup16.png" />
-    <Resource Include="Icons\smallgroup24.png" />
+    <Resource Include="res\icons\character16.png" />
+    <Resource Include="res\icons\character24.png" />
+    <Resource Include="res\icons\contract16.png" />
+    <Resource Include="res\icons\contract24.png" />
+    <Resource Include="res\icons\corp16.png" />
+    <Resource Include="res\icons\corp24.png" />
+    <Resource Include="res\icons\donation16.png" />
+    <Resource Include="res\icons\donation24.png" />
+    <Resource Include="res\icons\interaction16.png" />
+    <Resource Include="res\icons\interaction24.png" />
+    <Resource Include="res\icons\kill16.png" />
+    <Resource Include="res\icons\kill24.png" />
+    <Resource Include="res\icons\largegroup16.png" />
+    <Resource Include="res\icons\largegroup24.png" />
+    <Resource Include="res\icons\mail16.png" />
+    <Resource Include="res\icons\mail24.png" />
+    <Resource Include="res\icons\settings16.png" />
+    <Resource Include="res\icons\settings24.png" />
+    <Resource Include="res\icons\smallgroup16.png" />
+    <Resource Include="res\icons\smallgroup24.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\character32.png" />
-    <Resource Include="Icons\contract32.png" />
-    <Resource Include="Icons\corp32.png" />
-    <Resource Include="Icons\donation32.png" />
-    <Resource Include="Icons\interaction32.png" />
-    <Resource Include="Icons\kill32.png" />
-    <Resource Include="Icons\largegroup32.png" />
-    <Resource Include="Icons\mail32.png" />
-    <Resource Include="Icons\settings32.png" />
-    <Resource Include="Icons\smallgroup32.png" />
+    <Resource Include="res\icons\character32.png" />
+    <Resource Include="res\icons\contract32.png" />
+    <Resource Include="res\icons\corp32.png" />
+    <Resource Include="res\icons\donation32.png" />
+    <Resource Include="res\icons\interaction32.png" />
+    <Resource Include="res\icons\kill32.png" />
+    <Resource Include="res\icons\largegroup32.png" />
+    <Resource Include="res\icons\mail32.png" />
+    <Resource Include="res\icons\settings32.png" />
+    <Resource Include="res\icons\smallgroup32.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

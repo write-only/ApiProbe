@@ -11,7 +11,7 @@
             <TreeView.Resources>
                 <HierarchicalDataTemplate DataType="{x:Type local:MailItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
-                        <Image Source="/Icons/mail16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
+                        <Image Source="/res/icons/mail16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
                         <StackPanel>
                             <TextBlock Text="{Binding Subject, StringFormat=\'{0}\'}" FontWeight="Bold" />
                             <TextBlock>
@@ -28,7 +28,7 @@
 
                 <HierarchicalDataTemplate DataType="{x:Type local:DonationItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
-                        <Image Source="/Icons/donation16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
+                        <Image Source="/res/icons/donation16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
                         <StackPanel>
                             <TextBlock Text="{Binding Amount, StringFormat={}{0:#,#.00} ISK}" FontWeight="Bold" />
                             <TextBlock>
@@ -41,7 +41,7 @@
 
                 <HierarchicalDataTemplate DataType="{x:Type local:ContractItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
-                        <Image Source="/Icons/contract16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
+                        <Image Source="/res/icons/contract16.png" Margin="0,0,5,0" MaxWidth="16" MaxHeight="16" />
                         <StackPanel>
                             <TextBlock Text="{Binding Amount, StringFormat={}{0:#,#.00} ISK}" FontWeight="Bold" />
                             <TextBlock>
@@ -54,7 +54,7 @@
 
                 <HierarchicalDataTemplate DataType="{x:Type local:CharacterItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
-                        <Image Source="/Icons/character24.png" Margin="0,0,5,0" MaxWidth="24" MaxHeight="24" />
+                        <Image Source="/res/icons/character24.png" Margin="0,0,5,0" MaxWidth="24" MaxHeight="24" />
                         <TextBlock Text="{Binding Name}" FontWeight="Bold" />
                     </StackPanel>
                 </HierarchicalDataTemplate>
