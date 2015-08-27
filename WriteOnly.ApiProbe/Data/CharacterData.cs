@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WriteOnly.ApiProbe.Data
+﻿namespace WriteOnly.ApiProbe.Data
 {
-    class Character
+    public class CharacterData
     {
 
         public string Name { get; set; }
@@ -18,7 +12,7 @@ namespace WriteOnly.ApiProbe.Data
             return Name;
         }
 
-        protected bool Equals(Character other)
+        protected bool Equals(CharacterData other)
         {
             return string.Equals(ID, other.ID);
         }
@@ -28,7 +22,7 @@ namespace WriteOnly.ApiProbe.Data
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
-            return Equals((Character) obj);
+            return Equals((CharacterData) obj);
         }
 
         public override int GetHashCode()
