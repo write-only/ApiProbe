@@ -127,6 +127,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="ApiHandling\IAnalyzer.cs" />
+    <Compile Include="ApiHandling\MailAnalyzer.cs" />
     <Compile Include="ApiHandling\WalletAnalyzer.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

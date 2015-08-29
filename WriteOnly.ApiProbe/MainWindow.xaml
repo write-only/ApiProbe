@@ -8,7 +8,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" x:ClassModifier="internal">
     <Grid>
-        <TreeView Name="TreeView">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="347*"/>
+        </Grid.ColumnDefinitions>
+        <TreeView Name="TreeView" Grid.ColumnSpan="1" Margin="5">
             <TreeView.Resources>
                 <HierarchicalDataTemplate DataType="{x:Type ui:MailItem}" ItemsSource="{Binding Items}">
                     <StackPanel Margin="5" Orientation="Horizontal">
