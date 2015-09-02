@@ -4,7 +4,7 @@ ApiProbe is an EVE Online Api key analyzer that analyzes relationships between p
 
 Warning
 -------
-None of the above is working yet, I just started to develop the app.
+This is a work in progress and not functional yet.    
 As I do this mainly as a way to learn more about C# and WPF don't
 expect development to be particularly fast.
 
