@@ -12,7 +12,7 @@ namespace WriteOnly.ApiProbe.Data
             return Name;
         }
 
-        protected bool Equals(CharacterData other)
+        protected bool Equals(IdValuePair other)
         {
             return ID == ID;
         }
@@ -22,7 +22,7 @@ namespace WriteOnly.ApiProbe.Data
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != GetType()) return false;
-            return Equals((CharacterData)obj);
+            return Equals((IdValuePair)obj);
         }
 
         public override int GetHashCode()
