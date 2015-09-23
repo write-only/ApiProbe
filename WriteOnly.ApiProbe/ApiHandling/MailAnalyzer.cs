@@ -1,45 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using eZet.EveLib.EveXmlModule;
-using WriteOnly.ApiProbe.Data;
 using eZet.EveLib.EveXmlModule.Models.Character;
+using WriteOnly.ApiProbe.Data;
 
 namespace WriteOnly.ApiProbe.ApiHandling
 {
-    class MailAnalyzer : IAnalyzer
+    internal class MailAnalyzer : IAnalyzer
     {
-        public List<Character> Characters
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public List<Character> Characters { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public HashSet<Interaction> Interactions
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public HashSet<Interaction> Interactions { get; set; }
 
         public MailAnalyzer(Character character)
         {
-            Characters = new List<Character> { character };
+            Characters = new List<Character> {character};
             Interactions = new HashSet<Interaction>();
         }
 
@@ -62,18 +38,40 @@ namespace WriteOnly.ApiProbe.ApiHandling
         {
             List<Interaction> interactions = new List<Interaction>();
 
-            List<MailMessages.Message> personalMails = new List<MailMessages.Message>();
-
-            interactions.AddRange(character.GetMailMessages().Result.Messages.Select(m => new MailInteraction
+            foreach (MailMessages.Message message in character.GetMailMessages().Result.Messages)
             {
-                PrimaryCharacter = new CharacterData { Name = m.SenderName, ID = m.SenderId },
-                SecondaryCharacter = new CharacterData { }
-            }));
-
+                if (message.SenderId.Equals(character.CharacterId))
+                {
+                    interactions.AddRange(ToCharacters(message.ToCharacterIds).Select(c => new MailInteraction
+                    {
+                        PrimaryCharacter = new CharacterData(character),
+                        SecondaryCharacter = c,
+                        Subject = message.Title,
+                        Body = GetBody(message),
+                        Time = message.SentDate
+                    }));
+                }
+                else
+                {
+                    interactions.Add(new MailInteraction
+                    {
+                        PrimaryCharacter = new CharacterData {ID = message.SenderId, Name = message.SenderName},
+                        SecondaryCharacter = new CharacterData(character),
+                        Subject = message.Title,
+                        Body = GetBody(message),
+                        Time = message.SentDate
+                    });
+                }
+            }
             return interactions;
         }
 
-        private List<CharacterData> ToCharacters (string toID)
+        private string GetBody(MailMessages.Message message)
+        {
+            throw new NotImplementedException();
+        }
+
+        private List<CharacterData> ToCharacters(string toID)
         {
             List<CharacterData> characters = new List<CharacterData>();
 
