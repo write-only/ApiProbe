@@ -4,8 +4,6 @@
     {
         private decimal _amount;
 
-        public long ID { get; set; }
-
         public decimal Amount
         {
             get
@@ -18,22 +16,24 @@
             }
         }
 
-        protected bool Equals(WalletInteraction other)
-        {
-            return ID == other.ID;
-        }
+        public long ID { get; set; }
 
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj.GetType() != GetType()) return false;
             return Equals((WalletInteraction) obj);
         }
 
         public override int GetHashCode()
         {
             return ID.GetHashCode();
+        }
+
+        private bool Equals(WalletInteraction other)
+        {
+            return ID == other.ID;
         }
     }
 }
