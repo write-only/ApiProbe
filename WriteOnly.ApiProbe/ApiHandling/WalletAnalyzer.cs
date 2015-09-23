@@ -63,9 +63,9 @@ namespace WriteOnly.ApiProbe.ApiHandling
                     Amount = j.Amount,
                     Time = j.Date,
                     Reason = j.Reason,
-                    PrimaryCharacter = new CharacterData {Name = j.OwnerName, ID = j.OwnerId},
-                    SecondaryCharacter = new CharacterData {Name = j.ArgumentName, ID = j.ArgumentId},
-                    Corporation = new CorporationData {Name = j.ParticipantName, ID = j.ParticipantId},
+                    PrimaryCharacter = new CharacterData {Name = j.ArgumentName, ID = j.ArgumentId},
+                    SecondaryCharacter = new CharacterData {Name = j.ParticipantName, ID = j.ParticipantId},
+                    Corporation = new CorporationData {Name = j.OwnerName, ID = j.OwnerId},
                     ID = j.RefId
                 }));
 
